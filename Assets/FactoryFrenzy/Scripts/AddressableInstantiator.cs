@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -7,21 +6,14 @@ using TMPro;
 
 public class AddressableInstantiator : MonoBehaviour
 {
-    [SerializeField] private List<AssetReferenceGameObject> addressableObjects; 
-    [SerializeField] private TMP_Dropdown objectDropdown; 
-
-    private GameObject _instanceReference;
+    [SerializeField] private List<AssetReferenceGameObject> addressableObjects;
+    [SerializeField] private TMP_Dropdown objectDropdown;
 
     private GameObject selectedPlatform;
 
-    private void Update()
-    {
-        HandleObjectSelection();
-    }
-
     public void LoadSelectedPlatform()
     {
-        int selectedIndex = objectDropdown.value; 
+        int selectedIndex = objectDropdown.value;
         AssetReferenceGameObject selectedObject = addressableObjects[selectedIndex];
 
         selectedObject.InstantiateAsync().Completed += OnAddressableInstantiated;
@@ -31,44 +23,35 @@ public class AddressableInstantiator : MonoBehaviour
     {
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
-            _instanceReference = handle.Result;
-        }
-    }
+            GameObject instance = handle.Result;
 
-    private void HandleObjectSelection()
-    {
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit))
+            // Ensure it has the GrabTracker for interaction
+            if (instance.GetComponent<GrabTracker>() == null)
             {
-                if (hit.collider != null)
-                {
-                    selectedPlatform = hit.collider.gameObject; 
-                    Debug.Log($"Selected: {selectedPlatform.name}");
-                }
+                instance.AddComponent<GrabTracker>().Setup(this);
             }
+
+            Debug.Log($"Platform instantiated: {instance.name}");
         }
     }
 
+    public void SetSelectedPlatform(GameObject platform)
+    {
+        selectedPlatform = platform;
+        Debug.Log($"Selected Platform: {selectedPlatform.name}");
+    }
 
     public void DeletePlatform()
     {
         if (selectedPlatform != null)
         {
-            foreach (var obj in addressableObjects)
-            {
-                if (obj.RuntimeKeyIsValid() && obj.Asset != null)
-                {
-                    obj.ReleaseInstance(selectedPlatform);
-                }
-            }
-
+            Destroy(selectedPlatform);
+            Debug.Log("Selected platform deleted!");
             selectedPlatform = null;
         }
         else
         {
-            Debug.LogWarning("No object selected to delete!");
+            Debug.LogWarning("No platform selected to delete!");
         }
     }
 }
