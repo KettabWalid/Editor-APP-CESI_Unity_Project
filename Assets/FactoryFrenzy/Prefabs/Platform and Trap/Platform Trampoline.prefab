@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2026836401041588355}
   - component: {fileID: 630009650965734877}
   - component: {fileID: -168529903678441315}
+  - component: {fileID: 5488747244552327076}
   m_Layer: 0
   m_Name: Platform Trampoline
   m_TagString: Platform
@@ -245,6 +246,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dc8fbf98cbdaa4ab1383711ca612a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5488747244552327076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652329573806549489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44fccd7f285b144bbf615e92087beab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 10
 --- !u!1001 &8165750234495722686
 PrefabInstance:
   m_ObjectHideFlags: 0

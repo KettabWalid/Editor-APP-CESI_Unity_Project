@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6748061771767575525}
   - component: {fileID: 6009934218609027242}
   - component: {fileID: -6325431917401760074}
+  - component: {fileID: -7076111406180354697}
   m_Layer: 0
   m_Name: Trap shooter
   m_TagString: Platform
@@ -246,6 +247,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dc8fbf98cbdaa4ab1383711ca612a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7076111406180354697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652329573806549489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3455fc30f5a7e6489135655a0b22d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  rotationSpeed: 20
+  leftAngle: -45
+  rightAngle: 45
+  turnSpeed: 5
+  orientationThreshold: 30
+  bulletPrefab: {fileID: 2638973343275460169, guid: 437886a01f731da4bbda83f7b1033569,
+    type: 3}
+  firePoint: {fileID: 0}
+  fireRate: 0.7
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 8
+  detectionRadius: 0.5
+  knockbackForce: 0.3
 --- !u!1001 &338370507454878209
 PrefabInstance:
   m_ObjectHideFlags: 0

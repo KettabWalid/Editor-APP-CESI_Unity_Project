@@ -5,11 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
+  - Checkpoint
+  - FallZone
+  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - detectionMask
   - Water
   - UI
   - 

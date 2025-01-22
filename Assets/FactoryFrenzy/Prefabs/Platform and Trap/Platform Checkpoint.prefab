@@ -121,9 +121,10 @@ GameObject:
   - component: {fileID: 1967764215377245684}
   - component: {fileID: -6137450328341195326}
   - component: {fileID: -2773595551721349850}
+  - component: {fileID: -7651215327487163958}
   m_Layer: 0
   m_Name: Platform Checkpoint
-  m_TagString: Platform
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,6 +376,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dc8fbf98cbdaa4ab1383711ca612a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7651215327487163958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652329573806549489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e69d1863dd0ee94a8eafd2ccc142e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPoint: {fileID: 0}
 --- !u!1001 &1012660308529904740
 PrefabInstance:
   m_ObjectHideFlags: 0
