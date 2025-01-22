@@ -6,17 +6,20 @@ using TMPro;
 
 public class AddressableInstantiator : MonoBehaviour
 {
-    [SerializeField] private List<AssetReferenceGameObject> addressableObjects;
-    [SerializeField] private TMP_Dropdown objectDropdown;
+    [SerializeField] private List<AssetReferenceGameObject> addressableObjects; // List of addressable objects
+    [SerializeField] private TMP_Dropdown objectDropdown; // Dropdown for platform selection
+    public Transform startPos; // Starting position transform
+    public float snapRadius = 2.0f; // Distance within which snapping can occur
 
-    private GameObject selectedPlatform;
+    private GameObject selectedPlatform; // Reference to the selected platform
+    private List<GameObject> instantiatedPlatforms = new List<GameObject>(); // Track all instantiated platforms
 
     public void LoadSelectedPlatform()
     {
-        int selectedIndex = objectDropdown.value;
+        int selectedIndex = objectDropdown.value; // Get selected index from dropdown
         AssetReferenceGameObject selectedObject = addressableObjects[selectedIndex];
 
-        selectedObject.InstantiateAsync().Completed += OnAddressableInstantiated;
+        selectedObject.InstantiateAsync().Completed += OnAddressableInstantiated; // Instantiate the selected platform
     }
 
     void OnAddressableInstantiated(AsyncOperationHandle<GameObject> handle)
@@ -25,11 +28,21 @@ public class AddressableInstantiator : MonoBehaviour
         {
             GameObject instance = handle.Result;
 
-            // Ensure it has the GrabTracker for interaction
-            if (instance.GetComponent<GrabTracker>() == null)
+            // Set position at startPos initially
+            if (startPos != null)
             {
-                instance.AddComponent<GrabTracker>().Setup(this);
+                instance.transform.position = startPos.position;
+                instance.transform.rotation = startPos.rotation;
             }
+
+            //// Ensure it has the GrabTracker for interaction
+            //if (instance.GetComponent<GrabTracker>() == null)
+            //{
+            //    instance.AddComponent<GrabTracker>().OnEnable(this);
+            //}
+
+            // Add to the list of instantiated platforms
+            instantiatedPlatforms.Add(instance);
 
             Debug.Log($"Platform instantiated: {instance.name}");
         }
@@ -45,6 +58,7 @@ public class AddressableInstantiator : MonoBehaviour
     {
         if (selectedPlatform != null)
         {
+            instantiatedPlatforms.Remove(selectedPlatform); // Remove from list
             Destroy(selectedPlatform);
             Debug.Log("Selected platform deleted!");
             selectedPlatform = null;
@@ -54,4 +68,51 @@ public class AddressableInstantiator : MonoBehaviour
             Debug.LogWarning("No platform selected to delete!");
         }
     }
+
+    //public void SnapPlatform(GameObject grabbedPlatform)
+    //{
+    //    if (grabbedPlatform == null)
+    //    {
+    //        Debug.LogWarning("No grabbed platform provided for snapping.");
+    //        return;
+    //    }
+
+    //    // Find the closest platform with the "Platforme" tag to snap to
+    //    GameObject closestPlatform = null;
+    //    float closestDistance = float.MaxValue;
+
+    //    foreach (GameObject platform in instantiatedPlatforms)
+    //    {
+    //        if (platform == grabbedPlatform || !platform.CompareTag("Platforme")) continue; // Skip the grabbed platform or unrelated objects
+
+    //        float distance = Vector3.Distance(grabbedPlatform.transform.position, platform.transform.position);
+    //        if (distance < snapRadius && distance < closestDistance)
+    //        {
+    //            closestPlatform = platform;
+    //            closestDistance = distance;
+    //        }
+    //    }
+
+    //    if (closestPlatform != null)
+    //    {
+    //        // Calculate the snap position relative to the closest platform
+    //        Vector3 snapOffset = new Vector3(
+    //            closestPlatform.transform.localScale.x / 2 + grabbedPlatform.transform.localScale.x / 2,
+    //            0,
+    //            0); // Adjust based on your platform orientation and desired snapping
+
+    //        Vector3 snapPosition = closestPlatform.transform.position + snapOffset;
+
+    //        // Snap the grabbed platform to the calculated position
+    //        grabbedPlatform.transform.position = snapPosition;
+
+    //        Debug.Log($"Platform snapped to: {closestPlatform.name} at {snapPosition}");
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("No nearby platform to snap to within the radius.");
+    //    }
+    //}
+
 }
+

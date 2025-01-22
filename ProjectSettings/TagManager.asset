@@ -8,6 +8,7 @@ TagManager:
   - Checkpoint
   - FallZone
   - Bullet
+  - Snap
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - detectionMask
   - Water
   - UI
-  - 
+  - PlatformCollision
   - 
   - 
   - 

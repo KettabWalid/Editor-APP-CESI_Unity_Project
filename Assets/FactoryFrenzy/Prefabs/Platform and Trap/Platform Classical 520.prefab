@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dc8fbf98cbdaa4ab1383711ca612a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapTag: Snap
 --- !u!1001 &20160872169042945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263,6 +264,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PROFIL 520MM (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753445069451088612, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7499729398764800650, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
         type: 3}
@@ -338,6 +344,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PROFIL 520MM (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5753445069451088612, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7499729398764800650, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -411,6 +422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PROFIL 520MM (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753445069451088612, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7499729398764800650, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
         type: 3}
@@ -486,6 +502,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PROFIL 520MM (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5753445069451088612, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7499729398764800650, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -559,6 +580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PROFIL 520MM (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753445069451088612, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7499729398764800650, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
         type: 3}
@@ -634,6 +660,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PROFIL 520MM (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5753445069451088612, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7499729398764800650, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -707,6 +738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PROFIL 520MM
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753445069451088612, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7499729398764800650, guid: e3c4aa245ede86d46a0fc2a384ab5f3f,
         type: 3}
