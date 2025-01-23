@@ -86,18 +86,16 @@ public class TrapShooter : MonoBehaviour
             return;
         }
 
-        // Continuously make the shooter face the player
-        Vector3 directionToPlayer = targetPlayer.position - transform.position;
+        // Track the player continuously by calculating the direction towards the player
+        Vector3 directionToPlayer = (targetPlayer.position - transform.position).normalized;
 
-        // Calculate the rotation needed to face the player
-        Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
-
-        // Immediately update the rotation (for faster reaction)
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+        // Update rotation to face the player
+        Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
 
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
 
-        // If within shooting range, go to shooting state
+        // If within the shooting range, go to shooting state
         if (angleToPlayer <= orientationThreshold)
         {
             currentState = State.Shooting;
