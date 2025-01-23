@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: -8992031512049547356}
   - component: {fileID: 9058511759688171161}
   - component: {fileID: -4428053446635955722}
+  - component: {fileID: 2916714599762844133}
+  - component: {fileID: 8487682045041698962}
   m_Layer: 0
   m_Name: Trap fan
   m_TagString: Platform
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4652329573806549489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -247,6 +249,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dc8fbf98cbdaa4ab1383711ca612a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapTag: Snap
+--- !u!114 &2916714599762844133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652329573806549489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7a9838da07bae488a73b171857dcf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheel: {fileID: 2752773567370132481}
+  spinSpeed: 500
+  pushForce: 50
+--- !u!65 &8487682045041698962
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652329573806549489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15, y: 0.15, z: 0.5}
+  m_Center: {x: 0, y: 0.1, z: 0.25}
 --- !u!1 &7184536005258151031
 GameObject:
   m_ObjectHideFlags: 0

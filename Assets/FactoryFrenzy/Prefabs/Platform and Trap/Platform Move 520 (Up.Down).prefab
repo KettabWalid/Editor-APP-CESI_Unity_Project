@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: -466660699410077355}
   - component: {fileID: -1867181576868207489}
   - component: {fileID: -768156785025580515}
-  - component: {fileID: -907213844625533180}
+  - component: {fileID: -1530512102616198431}
   m_Layer: 0
-  m_Name: Platform Move 520
+  m_Name: Platform Move 520 (Up.Down)
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337,7 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dc8fbf98cbdaa4ab1383711ca612a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-907213844625533180
+  snapTag: Snap
+--- !u!114 &-1530512102616198431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -346,11 +347,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4652329573806549489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab29ab27c18bf4f409f3b0d4b0245ded, type: 3}
+  m_Script: {fileID: 11500000, guid: 5579e9bcbb1373d4c830b5cac4299b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: {fileID: 0}
-  endPoint: {fileID: 0}
+  offsetDistance: 1
   moveDuration: 2
 --- !u!1 &6978180276376833145
 GameObject:

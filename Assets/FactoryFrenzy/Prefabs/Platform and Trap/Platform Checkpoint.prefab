@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dc8fbf98cbdaa4ab1383711ca612a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapTag: Snap
 --- !u!114 &-7651215327487163958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformStartPosition: {fileID: 0}
+  checkpointLight: {fileID: 3541890436503415731}
 --- !u!1 &4846194538790703287
 GameObject:
   m_ObjectHideFlags: 0
