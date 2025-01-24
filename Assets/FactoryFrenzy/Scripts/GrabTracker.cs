@@ -7,6 +7,8 @@ public class GrabTracker : MonoBehaviour
     private GameObject grabbedPlatform; // The currently grabbed platform
     private Transform grabbedSnapPoint; // The snap point on the grabbed platform
 
+    private AddressableInstantiator instantiator;
+
     private void OnEnable()
     {
         var interactable = GetComponent<XRGrabInteractable>();
@@ -26,7 +28,12 @@ public class GrabTracker : MonoBehaviour
     // Called when a platform is grabbed
     private void OnGrab(SelectEnterEventArgs args)
     {
+
         grabbedPlatform = args.interactableObject.transform.gameObject;
+        if (grabbedPlatform.CompareTag("Platform"))
+        {
+            instantiator.SetSelectedPlatform(grabbedPlatform);
+        } 
 
         // Find the snap point (child with tag "Snap")
         grabbedSnapPoint = grabbedPlatform.transform.FindChildWithTag(snapTag);

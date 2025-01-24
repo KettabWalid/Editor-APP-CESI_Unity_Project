@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2716740985591001584}
   - component: {fileID: -974309086689617116}
   - component: {fileID: 3076034140451904869}
-  m_Layer: 0
+  - component: {fileID: -1669959928425681190}
+  m_Layer: 7
   m_Name: Platform Classical 360
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -70,7 +71,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2716740985591001584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 2021545612171889115}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
@@ -187,11 +188,11 @@ MonoBehaviour:
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 0
+  m_SmoothPosition: 1
   m_SmoothPositionAmount: 5
   m_TightenPosition: 0.5
   m_TrackRotation: 1
-  m_SmoothRotation: 0
+  m_SmoothRotation: 1
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
@@ -254,6 +255,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapTag: Snap
+--- !u!114 &-1669959928425681190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652329573806549489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a35dca43f517a64a9e9b963097e5c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6100059001157031183
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,9 +277,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5663073293844549150}
   - component: {fileID: 8562219150037402506}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SnapPointEnd
-  m_TagString: Snap
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,9 +330,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2021545612171889115}
   - component: {fileID: 2124533356642993677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'SnapPointStart '
-  m_TagString: Snap
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 1452948559546534610, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7281590776085531196, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
@@ -455,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 1452948559546534610, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7281590776085531196, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
@@ -534,7 +547,7 @@ PrefabInstance:
     - target: {fileID: 1452948559546534610, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7281590776085531196, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
@@ -613,7 +626,7 @@ PrefabInstance:
     - target: {fileID: 1452948559546534610, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7281590776085531196, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
@@ -692,7 +705,7 @@ PrefabInstance:
     - target: {fileID: 1452948559546534610, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7281590776085531196, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
@@ -771,7 +784,7 @@ PrefabInstance:
     - target: {fileID: 1452948559546534610, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7281590776085531196, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
@@ -850,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 1452948559546534610, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7281590776085531196, guid: 9b8be69d825a0224fb28ae4d6ac858d2,
         type: 3}
