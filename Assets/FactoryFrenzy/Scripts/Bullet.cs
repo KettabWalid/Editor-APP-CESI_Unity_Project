@@ -22,13 +22,12 @@ public class Bullet : MonoBehaviour
 
         // Give the bullet an initial forward velocity
         rb.velocity = transform.forward * speed;
-<<<<<<< HEAD
-        rb.AddForce(transform.forward * speed, ForceMode.Impulse);
-=======
+
 
         // Destroy the bullet after a set lifespan if it doesn't collide
+        rb.AddForce(transform.forward * speed, ForceMode.Impulse);
         Destroy(gameObject, lifespan);
->>>>>>> f965c7e00f7595b77cce550916d66acc886e9d3a
+
     }
 
     // Set knockback force when the bullet hits an object
