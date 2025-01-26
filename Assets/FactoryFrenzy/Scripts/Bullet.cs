@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
     public float speed = 20f;
     private float knockbackForce;
     private Rigidbody rb;
+    public float lifespan = 5f; // Time before the bullet is destroyed if it doesn't hit anything
 
     // Initialize bullet components
     private void Start()
@@ -21,7 +22,13 @@ public class Bullet : MonoBehaviour
 
         // Give the bullet an initial forward velocity
         rb.velocity = transform.forward * speed;
+<<<<<<< HEAD
         rb.AddForce(transform.forward * speed, ForceMode.Impulse);
+=======
+
+        // Destroy the bullet after a set lifespan if it doesn't collide
+        Destroy(gameObject, lifespan);
+>>>>>>> f965c7e00f7595b77cce550916d66acc886e9d3a
     }
 
     // Set knockback force when the bullet hits an object

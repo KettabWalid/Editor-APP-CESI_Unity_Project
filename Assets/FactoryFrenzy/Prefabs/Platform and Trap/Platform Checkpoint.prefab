@@ -145,7 +145,11 @@ Transform:
   - {fileID: 6707680713031303846}
   - {fileID: 8454889137732387039}
   - {fileID: 4888100351205522817}
+<<<<<<< HEAD
   - {fileID: 3737942886538662981}
+=======
+  - {fileID: 590400796585659266}
+>>>>>>> f965c7e00f7595b77cce550916d66acc886e9d3a
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1417770502050284683
@@ -391,7 +395,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e69d1863dd0ee94a8eafd2ccc142e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   platformStartPosition: {fileID: 3737942886538662981}
+=======
+  platformStartPosition: {fileID: 590400796585659266}
+>>>>>>> f965c7e00f7595b77cce550916d66acc886e9d3a
   checkpointLight: {fileID: 3541890436503415731}
 --- !u!1 &4846194538790703287
 GameObject:
@@ -476,7 +484,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &5595707105677249133
+=======
+--- !u!1 &5491111507812561904
+>>>>>>> f965c7e00f7595b77cce550916d66acc886e9d3a
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -484,24 +496,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 3737942886538662981}
   m_Layer: 0
   m_Name: GameObject
+=======
+  - component: {fileID: 590400796585659266}
+  m_Layer: 0
+  m_Name: Checkpoint position
+>>>>>>> f965c7e00f7595b77cce550916d66acc886e9d3a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &3737942886538662981
+=======
+--- !u!4 &590400796585659266
+>>>>>>> f965c7e00f7595b77cce550916d66acc886e9d3a
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 5595707105677249133}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.205, y: 0, z: 0.233}
+=======
+  m_GameObject: {fileID: 5491111507812561904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.366, y: 0, z: 0.3}
+>>>>>>> f965c7e00f7595b77cce550916d66acc886e9d3a
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

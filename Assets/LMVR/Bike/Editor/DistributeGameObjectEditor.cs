@@ -15,8 +15,8 @@ public class DistributeGameObjectEditor : EditorWindow
     static void Init()
     {
         // Get existing open window or if none, make a new one:
-        DistributeGameObjectEditor window = (DistributeGameObjectEditor)EditorWindow.GetWindow<DistributeGameObjectEditor>();
-        window.Show();
+        //DistributeGameObjectEditor window = (DistributeGameObjectEditor)EditorWindow.GetWindow<DistributeGameObjectEditor>();
+        //window.Show();
     }
 
     void OnGUI()
