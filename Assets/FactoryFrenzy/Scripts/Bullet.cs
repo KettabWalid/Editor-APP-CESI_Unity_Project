@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Bullet : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Bullet : MonoBehaviour
 
         // Give the bullet an initial forward velocity
         rb.velocity = transform.forward * speed;
+        rb.AddForce(transform.forward * speed, ForceMode.Impulse);
     }
 
     // Set knockback force when the bullet hits an object
