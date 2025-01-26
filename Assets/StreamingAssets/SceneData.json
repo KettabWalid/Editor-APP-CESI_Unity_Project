@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 0,
+    "Position": {
+      "x": -0.8217659,
+      "y": 0.32439217
+    },
+    "Title": "Default Title",
+    "Description": "Default Text"
+  },
+  {
+    "Id": 0,
+    "Position": {
+      "x": -1.251855,
+      "y": -0.1437099
+    },
+    "Title": "Default Title",
+    "Description": "Default Text"
+  },
+  {
+    "Id": 1,
+    "Position": {
+      "x": -0.9400371,
+      "y": -0.0184744149
+    },
+    "Title": "Default Title",
+    "Description": "Default Text"
+  },
+  {
+    "Id": 2,
+    "Position": {
+      "x": -1.24420559,
+      "y": -0.0274136066
+    },
+    "Title": "Default Title",
+    "Description": "Default Text"
+  }
+]

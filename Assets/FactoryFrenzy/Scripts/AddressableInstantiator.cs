@@ -14,14 +14,23 @@ public class AddressableInstantiator : MonoBehaviour
     private GameObject selectedPlatform; // Reference to the selected platform
     public List<GameObject> instantiatedPlatforms = new List<GameObject>(); // Track all instantiated platforms
 
+    public EditorManager manager;
+   [SerializeField] int selectedIndex;
     public void LoadSelectedPlatform()
     {
-        int selectedIndex = objectDropdown.value; // Get selected index from dropdown
+         selectedIndex = objectDropdown.value; // Get selected index from dropdown
         AssetReferenceGameObject selectedObject = addressableObjects[selectedIndex];
 
         selectedObject.InstantiateAsync().Completed += OnAddressableInstantiated; // Instantiate the selected platform
-
+        
         //instantiatedPlatforms.Add(selectedObject);
+    }
+
+    public void CreatePOIOnScene(GameObject poi)
+    {
+        Transform camera = Camera.main.transform;
+        
+        manager.CreateNewPointOfInterest(poi, camera.position, camera.forward);
     }
 
     void OnAddressableInstantiated(AsyncOperationHandle<GameObject> handle)
@@ -33,14 +42,21 @@ public class AddressableInstantiator : MonoBehaviour
             // Set position at startPos initially
             if (startPos != null)
             {
-                instance.transform.position = startPos.position;
-                instance.transform.rotation = startPos.rotation;
+
+                instance.transform.position =new Vector3( instance.GetComponent<PointOfInterest>().PointOfInterestData.Position.x,
+                0,
+                1);
+                instance.transform.rotation =Quaternion.identity;
             }
 
             instantiatedPlatforms.Add(instance);
 
             Debug.Log($"Platform instantiated: {instance.name}");
+
+            Debug.Log(" index number " + instantiatedPlatforms.Count);
+            CreatePOIOnScene(instantiatedPlatforms[instantiatedPlatforms.Count-1]);
         }
+
     }
 
     public void SetSelectedPlatform(GameObject platform)
